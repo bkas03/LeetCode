@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0046-permutations](https://github.com/bkas03/LeetCode/tree/master/0046-permutations) |
 | [3286-find-a-safe-walk-through-a-grid](https://github.com/bkas03/LeetCode/tree/master/3286-find-a-safe-walk-through-a-grid) |
 ## Breadth-First Search
 |  |
@@ -25,4 +26,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [3286-find-a-safe-walk-through-a-grid](https://github.com/bkas03/LeetCode/tree/master/3286-find-a-safe-walk-through-a-grid) |
+## Backtracking
+|  |
+| ------- |
+| [0046-permutations](https://github.com/bkas03/LeetCode/tree/master/0046-permutations) |
 <!---LeetCode Topics End-->
