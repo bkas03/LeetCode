@@ -1,48 +1,51 @@
 class Solution {
     public int countCompleteComponents(int n, int[][] edges) {
-        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-        for(int i=0;i<n;i++) adj.add(new ArrayList<>());
-        for(int edge[]:edges)
-        {
-            adj.get(edge[0]).add(edge[1]);
-            adj.get(edge[1]).add(edge[0]);
+        ArrayList<Integer>[] graph = new ArrayList[n];
+        for (int i = 0; i < n; i++) {
+            graph[i] = new ArrayList<>();
         }
-        int ans =0;
-        boolean visited[] = new boolean[n];
-        for(int i=0;i<n;i++)
-        {
-            if(!visited[i])
-            {
-                int ne[] = {0,0};
-                bfs(i,adj,visited,ne);
-                if(ne[0]*(ne[0]-1)/2 == ne[1]/2)
-                {
+
+        for (int[] e : edges) {
+            graph[e[0]].add(e[1]);
+            graph[e[1]].add(e[0]);
+        }
+
+        boolean[] visited = new boolean[n];
+        int ans = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
+                ArrayList<Integer> component = new ArrayList<>();
+                dfs(i, graph, visited, component);
+
+                int vertices = component.size();
+                int degreeSum = 0;
+
+                for (int node : component) {
+                    degreeSum += graph[node].size();
+                }
+
+                int edgeCount = degreeSum / 2;
+                int requiredEdges = vertices * (vertices - 1) / 2;
+
+                if (edgeCount == requiredEdges) {
                     ans++;
                 }
             }
         }
-        return ans;        
+
+        return ans;
     }
-    private void bfs(int i,ArrayList<ArrayList<Integer>> adj,boolean visited[],int ne[])
-    {
-       Queue<Integer>  q = new LinkedList<>();
-       q.add(i);
-       visited[i] = true;
-       while(!q.isEmpty())
-       {
-        int curr = q.poll();
-        ne[0]++;
-        
-        for(int num:adj.get(curr))
-        {
-            ne[1]++;
-            if(!visited[num])
-            {
-                q.offer(num);
-                visited[num] = true;
-                
+
+    private void dfs(int node, ArrayList<Integer>[] graph, boolean[] visited,
+                     ArrayList<Integer> component) {
+        visited[node] = true;
+        component.add(node);
+
+        for (int nei : graph[node]) {
+            if (!visited[nei]) {
+                dfs(nei, graph, visited, component);
             }
         }
-       }
     }
 }
