@@ -7,6 +7,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0046-permutations](https://github.com/bkas03/LeetCode/tree/master/0046-permutations) |
 | [0486-predict-the-winner](https://github.com/bkas03/LeetCode/tree/master/0486-predict-the-winner) |
 | [0628-maximum-product-of-three-numbers](https://github.com/bkas03/LeetCode/tree/master/0628-maximum-product-of-three-numbers) |
+| [0860-lemonade-change](https://github.com/bkas03/LeetCode/tree/master/0860-lemonade-change) |
 | [0877-stone-game](https://github.com/bkas03/LeetCode/tree/master/0877-stone-game) |
 | [1140-stone-game-ii](https://github.com/bkas03/LeetCode/tree/master/1140-stone-game-ii) |
 | [1260-shift-2d-grid](https://github.com/bkas03/LeetCode/tree/master/1260-shift-2d-grid) |
@@ -156,6 +157,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Greedy
 |  |
 | ------- |
+| [0860-lemonade-change](https://github.com/bkas03/LeetCode/tree/master/0860-lemonade-change) |
 | [2029-stone-game-ix](https://github.com/bkas03/LeetCode/tree/master/2029-stone-game-ix) |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/bkas03/LeetCode/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/bkas03/LeetCode/tree/master/3016-minimum-number-of-pushes-to-type-word-ii) |
